@@ -1,0 +1,109 @@
+
+
+
+`timescale 1ns / 1ps
+
+module soru1a( 
+    // GİRİŞ ÇIKIŞLAR BURAYA TANIMLANIR.
+    
+    input A,B,C,
+    output F,Q 
+
+    );
+    
+    wire nA;
+    not i1(nA,A);
+    
+    wire nAxorB;
+    xor i2(nAxorB,nA,B);
+    
+    wire BnandC;
+    nand i3(BnandC,B,C);
+    
+    wire nC;
+    not i4 (nC,C);
+    
+    wire nCorB;
+    or i5(nCorB,nC,B);
+    
+    xnor(F,nAxorB,BnandC);
+    
+    nor(Q,nAxorB,BnandC,nCorB);
+    
+    
+    
+    
+endmodule 
+
+
+
+
+
+
+`timescale 1ns / 1ps
+
+module tb_soru1a(
+//giriş çıkışlar burada tanımşlanır.
+    );
+    
+    reg Atb,Btb,Ctb ;
+    
+    wire Ftb,Qtb;
+    
+    soru1a uut(
+    .A(Atb),
+    .B(Btb),
+    .C(Ctb),
+    .F(Ftb),
+    .Q(Qtb)
+    );
+    
+    initial begin
+    //Bu kısım 1 kere çalışır.
+    Atb = 0;
+    Btb = 0;
+    Ctb = 0;
+    #10;
+    Atb = 0;
+    Btb = 0;
+    Ctb = 1;
+    #10;
+    Atb = 0;
+    Btb = 1;
+    Ctb = 0;
+    #10;
+    Atb = 0;
+    Btb = 1;
+    Ctb = 1;
+    #10;
+    
+    
+    Atb = 1;
+    Btb = 0;
+    Ctb = 0;
+    #10;
+    Atb = 1;
+    Btb = 0;
+    Ctb = 1;
+    #10;
+    Atb = 1;
+    Btb = 1;
+    Ctb = 0;
+    #10;
+    Atb = 1;
+    Btb = 1;
+    Ctb = 1;
+    #10;
+    end   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+endmodule
