@@ -1,2 +1,3 @@
 # Verilog Gate Level Coding
- Verilog
+
+I made a little Verilog project. Also, you can access the screenshot about my tiny gates.
