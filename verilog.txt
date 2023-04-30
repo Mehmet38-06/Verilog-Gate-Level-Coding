@@ -4,7 +4,7 @@
 `timescale 1ns / 1ps
 
 module soru1a( 
-    // GİRİŞ ÇIKIŞLAR BURAYA TANIMLANIR.
+    // Inputs and outputs is defined here.
     
     input A,B,C,
     output F,Q 
@@ -43,7 +43,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module tb_soru1a(
-//giriş çıkışlar burada tanımşlanır.
+//Inputs and outputs is defined here.
     );
     
     reg Atb,Btb,Ctb ;
