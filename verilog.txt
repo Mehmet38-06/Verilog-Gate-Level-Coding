@@ -4,7 +4,7 @@
 `timescale 1ns / 1ps
 
 module soru1a( 
-    // Inputs and outputs is defined here.
+    // Inputs and outputs are defined here.
     
     input A,B,C,
     output F,Q 
@@ -43,7 +43,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module tb_soru1a(
-//Inputs and outputs is defined here.
+//Inputs and outputs are defined here.
     );
     
     reg Atb,Btb,Ctb ;
@@ -59,7 +59,7 @@ module tb_soru1a(
     );
     
     initial begin
-    //Bu kısım 1 kere çalışır.
+    //This part is run for once.
     Atb = 0;
     Btb = 0;
     Ctb = 0;
